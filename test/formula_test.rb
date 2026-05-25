@@ -16,7 +16,7 @@ class FormulaTest < Minitest::Test
 
   def test_formula_installs_binary_and_smoke_tests_help
     assert_match(/bin\.install "s46"/, @formula)
-    assert_match(/shell_output\("#\{bin\}\/s46 --help"\)/, @formula)
-    assert_match(/assert_match "Sovereign46 CLI"/, @formula)
+    assert_match(/generate_completions_from_executable\(bin\/"s46", "completion"\)/, @formula)
+    assert_match(/system "#\{bin\}\/s46", "--help"/, @formula)
   end
 end
