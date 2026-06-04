@@ -14,3 +14,7 @@ Or install directly:
 ```sh
 brew install sovereign46/tap/s46
 ```
+
+## License
+
+This repository is licensed under the Apache License 2.0. See [LICENSE](LICENSE).

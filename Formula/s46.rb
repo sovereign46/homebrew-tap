@@ -6,7 +6,7 @@ class S46 < Formula
   desc "Sovereign46 CLI control plane for coding-agent harnesses"
   homepage "https://sovereign46.com"
   version "0.2.2"
-  license "BUSL-1.1"
+  license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
