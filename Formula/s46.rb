@@ -5,13 +5,13 @@
 class S46 < Formula
   desc "Sovereign46 CLI control plane for coding-agent harnesses"
   homepage "https://sovereign46.com"
-  version "0.2.3"
+  version "0.2.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sovereign46/cli/releases/download/v0.2.3/s46_0.2.3_darwin_amd64.tar.gz"
-      sha256 "35671152567919f1e782648b8750c11333d67ea147c04f2c8018bee5ac8532ff"
+      url "https://github.com/sovereign46/cli/releases/download/v0.2.4/s46_0.2.4_darwin_amd64.tar.gz"
+      sha256 "066490fdb4363581258edfdf0a174626168e3e3bebeb93fea816eb53581a0aa8"
 
       define_method(:install) do
         bin.install "s46"
@@ -19,8 +19,8 @@ class S46 < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sovereign46/cli/releases/download/v0.2.3/s46_0.2.3_darwin_arm64.tar.gz"
-      sha256 "f2427433707e6b05e885b92fe312c0e4771cb6b899ac06e800a8ef9514ae1de8"
+      url "https://github.com/sovereign46/cli/releases/download/v0.2.4/s46_0.2.4_darwin_arm64.tar.gz"
+      sha256 "95ca99a4b3ea257919e97930f923870662a505a9d6668e6eda79c705dc867ad6"
 
       define_method(:install) do
         bin.install "s46"
@@ -31,16 +31,16 @@ class S46 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sovereign46/cli/releases/download/v0.2.3/s46_0.2.3_linux_amd64.tar.gz"
-      sha256 "139de7f1561ce3da8dc2bdd4d2f812a38aad82a6f1783579e1ca14196f68c446"
+      url "https://github.com/sovereign46/cli/releases/download/v0.2.4/s46_0.2.4_linux_amd64.tar.gz"
+      sha256 "2ef51fc84a9baaf2ca1f3fc9d120fa19e8241e3e11765e66de957cd66c4ec317"
       define_method(:install) do
         bin.install "s46"
         generate_completions_from_executable(bin/"s46", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sovereign46/cli/releases/download/v0.2.3/s46_0.2.3_linux_arm64.tar.gz"
-      sha256 "61ed69fbd080febf64ce390207959b5960f698c0aeb4ea0d9713b749c2efa01d"
+      url "https://github.com/sovereign46/cli/releases/download/v0.2.4/s46_0.2.4_linux_arm64.tar.gz"
+      sha256 "0bec3118261886b85377314496157ebd76620ba089f571ef6aab12bf7bfd4c24"
       define_method(:install) do
         bin.install "s46"
         generate_completions_from_executable(bin/"s46", "completion")
